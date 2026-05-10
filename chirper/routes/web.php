@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\Auth\Register;
+use App\Http\Controllers\Auth\Logout;
 
 Route::get('/', [ChirpController::class, 'index']);
 Route::post('/chirps', [ChirpController::class, 'store']);
@@ -16,3 +17,5 @@ Route::view('/register', 'auth.register')
         ->middleware('guest');
 Route::post('/register', Register::class)
         ->middleware('guest');
+Route::post('/logout', Logout::class)
+    ->middleware('auth');
