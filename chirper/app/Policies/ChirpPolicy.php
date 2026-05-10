@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\C;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
+use App\Models\Chirp;
 
 class ChirpPolicy
 {
